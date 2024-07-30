@@ -3,4 +3,4 @@ Program ini dibuat untuk menyelesaikan tugas ujian akhir semester genap mata kul
 Nama: Mushfi Abdulloh Kafa  
 NIM : 20230801229  
 
-berikut adalah link untuk laporannya:
+berikut adalah link untuk laporannya: https://drive.google.com/file/d/1p0XpHMhKXS2Kl2hkCwwKljTqMO-_dIEK/view?usp=sharing
