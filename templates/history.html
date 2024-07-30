@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Belanja</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-">
+        <h1 class="text-center">History Belanja</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Transaksi</th>
+                    <th>Total Amount</th>
+                    <th>Transaction Date</th>
+                    <th>Voucher Code</th>
+                    <th>Voucher Nominal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.transaction_id }}</td>
+                    <td>{{ transaction.final_amount }}</td>
+                    <td>{{ transaction.transaction_date }}</td>
+                    <td>{{ transaction.voucher_code }}</td>
+                    <td>{{ transaction.voucher_nominal }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary mt-3">Kembali ke Halaman Utama</a>
+    </div>
+</body>
+</html>

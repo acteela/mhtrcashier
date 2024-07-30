@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Voucher Anda</h1>
+        <form id="voucher_form">
+            <input type="text" id="voucher_code" name="voucher_code" placeholder="Masukkan kode voucher">
+            <button type="button" onclick="applyVoucher()">Gunakan Voucher</button>
+        </form>
+        <button type="button" onclick="goBack()">Kembali</button>
+    </div>
+
+    <script>
+        function applyVoucher() {
+            const voucherCode = document.getElementById('voucher_code').value;
+
+            fetch('/apply_voucher', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ voucher_code: voucherCode })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(`Voucher berhasil digunakan! Nominal: Rp. ${data.nominal.toLocaleString('id-ID')},00`);
+                } else {
+                    alert('Voucher tidak valid atau sudah digunakan.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

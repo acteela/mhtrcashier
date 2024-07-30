@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #eeeeee;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333333;
+}
+
+p {
+    color: #666666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.item input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #31363F;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button#add_item_button {
+    background-color: #76abae;
+    border: none;
+}
+
+button#add_item_button:hover {
+    background-color: #375f61;
+}
+
+button#calculate_button {
+    background-color: #222831;
+    border: none;
+}
+
+button#calculate_button:hover {
+    background-color: #10141a;
+}
+
+button#reset_button {
+    background-color: #57A6A1;
+    border: none;
+}
+
+button#reset_button:hover {
+    background-color: #3f8d88;
+}
+
+#total_belanja {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#voucher_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#voucher_form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#voucher_form button {
+    background-color: #31363F;
+}
+
+#voucher_form button:hover {
+    background-color: #10141a;
+}
+
